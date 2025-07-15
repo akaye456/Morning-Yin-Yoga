@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Video Picker</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    button { padding: 10px 20px; font-size: 18px; cursor: pointer; }
+    a { display: block; margin-top: 20px; font-size: 20px; color: #0077cc; }
+  </style>
+</head>
+<body>
+  <h1>🎬 Random Video Picker</h1>
+  <button onclick="pickRandom()">Pick a Video</button>
+  <p id="result"></p>
+
+  <script>
+    const videos = [
+      { title: "Whimsical Dog Adventure", url: "https://youtu.be/example1" },
+      { title: "Creative Coloring Tips", url: "https://youtu.be/example2" },
+      { title: "Cat's Comedy Show", url: "https://youtu.be/example3" }
+    ];
+
+    function pickRandom() {
+      const choice = videos[Math.floor(Math.random() * videos.length)];
+      document.getElementById("result").innerHTML =
+        `<a href="${choice.url}" target="_blank">${choice.title}</a>`;
+    }
+  </script>
+</body>
+</html>
