@@ -9,7 +9,7 @@
   </style>
 </head>
 <body>
-  <h1>🎬 Random Video Picker</h1>
+  <h1> Random Video Picker</h1>
   <button onclick="pickRandom()">Pick a Video</button>
   <p id="result"></p>
 
